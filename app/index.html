@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mudarte</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="grid-view">
+    <header class="top">
+      <div class="heading-block">
+        <button type="button" id="archive-back" class="back" hidden>Back</button>
+        <div>
+          <p class="mark">Mudarte</p>
+          <h1 id="heading">Archive</h1>
+          <p id="lede" class="lede">Choose an institution.</p>
+        </div>
+      </div>
+      <p id="count" class="count"></p>
+    </header>
+    <main id="grid" class="grid"></main>
+  </div>
+
+  <section id="studio-view" hidden aria-labelledby="meta-name">
+    <header class="studio-bar">
+      <button type="button" id="back" class="back">Back</button>
+      <div class="meta">
+        <p id="meta-name" class="name"></p>
+        <p id="meta-institution"></p>
+        <p id="meta-license" class="license"></p>
+      </div>
+      <div class="bar-actions">
+        <button type="button" id="hide" aria-pressed="false">Hide remix</button>
+        <button type="button" id="download" class="primary" disabled>Download</button>
+      </div>
+    </header>
+    <div id="stage" class="stage">
+      <p id="loading" class="loading" hidden>Loading picture…</p>
+      <div class="frame">
+        <canvas id="base"></canvas>
+        <canvas id="draw" aria-label="Drawing layer"></canvas>
+      </div>
+    </div>
+    <footer class="tools">
+      <div id="colors" class="colors" role="group" aria-label="Ink color"></div>
+      <label class="size" for="size">Size <input id="size" type="range" min="2" max="48" value="8"></label>
+      <button type="button" id="eraser" aria-pressed="false">Eraser</button>
+      <button type="button" id="discard">Discard remix</button>
+    </footer>
+  </section>
+
+  <p id="notice" class="notice" hidden></p>
+  <script src="catalog.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
