@@ -2,6 +2,8 @@
 
 Mudarte is a light archive for looking through pictures from Brazilian cultural collections and remixing one picture at a time in the browser.
 
+This project derives from [Abre-te Código datasets](https://github.com/shawee-io/abrete-codigo-datasets). The pictures and the license records come from that collection.
+
 ## Archive
 
 The main page lists the institutions that have pictures. Each card shows the institution, one cover picture, and a short description of what the pictures are. Choose an institution to open its pictures, then choose a picture.
@@ -50,17 +52,5 @@ The institution list includes only the collections in `data/image`. Files in `da
 
 | Institution | License | Pictures |
 | --- | --- | --- |
-| Escola de Artes Visuais do Parque Lage | Public domain. The work is not protected by copyright. | Yes |
-| Instituto de Estudos Brasileiros da Universidade de São Paulo | CC BY. Credit the author or the institution. | No |
-| Museu Histórico Nacional/Ibram | Public domain. The work is not protected by copyright. | Yes |
-| Instituto Cultural Israelita Brasileiro - Casa do Povo | Public domain. The work is not protected by copyright. | No |
-| Instituto Moreira Salles | Public domain. The work is not protected by copyright. | Yes |
-| Museu do Futebol | CC BY-SA. Credit the author or the institution, and share remixes under the same terms. | No |
-| Memorial da Resistência de São Paulo | CC BY. Credit the author or the institution. | No |
-| Museu Paulista da USP | Public domain. The work is not protected by copyright. | Yes |
-| Itaú Cultural | Public domain. The work is not protected by copyright. | No |
-| Museu Nacional | CC BY. Credit the author or the institution. | No |
-| Museu de Astronomia e Ciências Afins | CC BY. Credit the author or the institution. | No |
-| Fundação Bienal de São Paulo | CC BY-NC-SA. Credit the author or the institution. No commercial use. Share remixes under the same terms. | No |
-| Museu de Arte Moderna de São Paulo | CC BY. Credit the author or the institution. | No |
-| Museu de Arte Contemporânea da Universidade de São Paulo | Public domain. The work is not protected by copyright. | Yes |
+| Museu de Arte Contemporânea da Universidade de São Paulo | PD - Domínio Público, a obra não é protegida por direitos autorais. | Yes |
+| Museu Paulista da USP | PD - Domínio Público, a obra não é protegida por direitos autorais. | Yes |

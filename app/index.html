@@ -12,12 +12,18 @@
       <div class="heading-block">
         <button type="button" id="archive-back" class="back" hidden>Back</button>
         <div>
-          <p class="mark">Mudarte</p>
-          <h1 id="heading">Archive</h1>
+          <h1 class="mark">Mudarte</h1>
+          <p id="heading" class="page-title" hidden></p>
           <p id="lede" class="lede">Choose an institution.</p>
         </div>
       </div>
-      <p id="count" class="count"></p>
+      <div class="header-side">
+        <div class="info-actions">
+          <button type="button" id="about-open">About the project</button>
+          <button type="button" id="how-open">How it works</button>
+        </div>
+        <p id="count" class="count"></p>
+      </div>
     </header>
     <main id="grid" class="grid"></main>
   </div>
@@ -44,13 +50,42 @@
     </div>
     <footer class="tools">
       <div id="colors" class="colors" role="group" aria-label="Ink color"></div>
-      <label class="size" for="size">Size <input id="size" type="range" min="2" max="48" value="8"></label>
+      <label class="size" for="size">Size
+        <select id="size">
+          <option value="2">2</option>
+          <option value="4">4</option>
+          <option value="8" selected>8</option>
+          <option value="12">12</option>
+          <option value="16">16</option>
+          <option value="24">24</option>
+          <option value="32">32</option>
+          <option value="48">48</option>
+        </select>
+      </label>
       <button type="button" id="eraser" aria-pressed="false">Eraser</button>
       <button type="button" id="discard">Discard remix</button>
     </footer>
   </section>
 
   <p id="notice" class="notice" hidden></p>
+
+  <dialog id="about-dialog">
+    <h2>About the project</h2>
+    <p>Mudarte is a light archive for looking through pictures from Brazilian cultural collections and remixing one picture at a time in the browser.</p>
+    <p>A remix stays in the browser and is not stored on a server.</p>
+    <button type="button" id="about-close">Close</button>
+  </dialog>
+
+  <dialog id="how-dialog">
+    <h2>How it works</h2>
+    <ul>
+      <li>Choose an institution, then a picture.</li>
+      <li>Draw, erase, and pick a size.</li>
+      <li>Hide, discard, or download the remix.</li>
+      <li>Back or Esc leaves the picture and drops the remix.</li>
+    </ul>
+    <button type="button" id="how-close">Close</button>
+  </dialog>
   <script src="catalog.js"></script>
   <script src="app.js"></script>
 </body>
