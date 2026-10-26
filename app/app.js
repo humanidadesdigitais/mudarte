@@ -128,7 +128,8 @@ function showInstitutions() {
   session.imageReady = false;
   clearOverlay();
   screen.name = "institutions";
-  heading.textContent = "Archive";
+  heading.textContent = "";
+  heading.hidden = true;
   lede.textContent = "Choose an institution.";
   count.textContent = countLabel(collections.length, "institution", "institutions");
   archiveBack.hidden = true;
@@ -172,6 +173,7 @@ function showCollection(slug) {
   session.imageReady = false;
   clearOverlay();
   screen.name = "collection";
+  heading.hidden = false;
   heading.textContent = collection.name;
   lede.textContent = collection.description;
   count.textContent = countLabel(pictures.length, "picture", "pictures");
@@ -457,7 +459,7 @@ COLORS.forEach((color) => {
   colorGroup.append(swatch);
 });
 
-sizeInput.addEventListener("input", () => {
+sizeInput.addEventListener("change", () => {
   session.size = Number(sizeInput.value);
 });
 
@@ -500,8 +502,17 @@ draw.addEventListener("contextmenu", (event) => event.preventDefault());
 
 archiveBack.addEventListener("click", leaveCollection);
 
+const aboutDialog = document.querySelector("#about-dialog");
+const howDialog = document.querySelector("#how-dialog");
+
+document.querySelector("#about-open").addEventListener("click", () => aboutDialog.showModal());
+document.querySelector("#how-open").addEventListener("click", () => howDialog.showModal());
+document.querySelector("#about-close").addEventListener("click", () => aboutDialog.close());
+document.querySelector("#how-close").addEventListener("click", () => howDialog.close());
+
 document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;
+  if (aboutDialog.open || howDialog.open) return;
   if (!studioView.hidden) leaveStudio();
   else leaveCollection();
 });

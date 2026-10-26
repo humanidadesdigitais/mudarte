@@ -2,3 +2,4 @@ app/thumbs/
 app/previews/
 __pycache__/
 *.pyc
+.cursor/skills/
